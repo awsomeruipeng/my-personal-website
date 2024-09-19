@@ -1,58 +1,52 @@
+/* 确保页面可以滚动，字体颜色为白色 */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: rgba(0, 0, 0, 0.7) url('sky.jpeg') no-repeat center center fixed;
+    background-size: cover; /* 使背景图片覆盖整个页面 */
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: white; /* 确保文字颜色为白色，在深色背景上清晰可见 */
 }
-
+/* 头部样式，取消黑色背景，保持透明或半透明 */
 header {
-    background-color: #333;
-    color: white;
+    background-color: transparent; /* 设置为透明，使背景图显示 */
+    color: white; /* 保持文字为白色 */
     padding: 20px;
     text-align: center;
+    width: 100%;
 }
 
-header h1 {
-    margin: 0;
+/* 保持图片椭圆形，但更自然 */
+img {
+    width: 150px; /* 设置固定宽度 */
+    height: auto; /* 根据宽度自动调整高度，保持原比例 */
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%; /* 保持椭圆形 */
+    border: 5px solid white; /* 为图片添加白色边框 */
 }
 
-header p {
-    font-size: 1.2em;
-}
-
+/* 确保“关于我”和“联系我”部分内容清晰可见 */
 section {
     padding: 20px;
     margin: 20px auto;
     width: 80%;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); /* 设置内容背景为半透明白色 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
+    max-width: 800px;
+    color: white; /* 设置文字为白色 */
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 5px 0;
-}
-
-a {
-    color: #333;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
+/* 页脚样式 */
 footer {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.8); /* 保持页脚半透明 */
     color: white;
     text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    width: 100%;
+    padding: 10px;
+    position: relative;
     bottom: 0;
+    width: 100%;
 }
